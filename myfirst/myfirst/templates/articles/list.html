@@ -4,6 +4,14 @@
 
 {% block content %}
 
-    Speak not Russian...
+    {% if latest_articles_list %}
+
+        {% for a in latest_articles_list %}
+            <a href="#">{{a.article_title}}</a>
+        {% endif %}}
+
+    {% else %}
+        Статьи не найдены )=
+    {% endif %}
 
 {% endblock %}
